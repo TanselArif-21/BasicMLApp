@@ -6,6 +6,8 @@ import os
 import string
 import random
 
+
+
 # This line sets the app directory as the working directory
 app = Flask(__name__)
 
@@ -41,6 +43,7 @@ def dosomething2():
         # This line creates a dataframe from a list of lists
         df = pd.DataFrame(request.get_array(field_name='file'))
 
+        #df = pd.read_excel(f)
         # The first row is the list of column names so set the column names to the first row
         df.columns = df.iloc[0, :]
 
