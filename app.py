@@ -41,7 +41,7 @@ def dosomething2():
     # If the request is a post request
     if request.method == 'POST':
         # This line creates a dataframe from a list of lists
-        df = pd.DataFrame(request.get_array(field_name='file'))
+        df = pd.DataFrame(request.args.get_array(field_name='file'))
 
         #df = pd.read_excel(f)
         # The first row is the list of column names so set the column names to the first row
