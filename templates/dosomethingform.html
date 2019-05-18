@@ -2,6 +2,9 @@
 <title>Upload an excel file</title>
 <h1>Excel file upload (csv)</h1>
 <form action="" method=post enctype=multipart/form-data><p></p>
+	<input type="submit" name="Download" value="Download Example File">
+</form>
+<form action="" method=post enctype=multipart/form-data><p></p>
 	<label>LotFrontage</label><input type="text" name="LotFrontage">
 	<label>LotArea</label><input type="text" name="LotArea"><p></p>
 	<label>OverallQual</label><input type="text" name="OverallQual">
@@ -38,4 +41,5 @@
 	<label>YrSoldlabel</label><input type="text" name="YrSold"><p></p>
 	<label>SalePrice</label><label>To be predicted</label>
 	<input type=file name=file><input type=submit value=Upload>
+	<input type="submit" name="Default" value="Use Default File">
 </form>
