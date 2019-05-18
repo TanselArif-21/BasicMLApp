@@ -3,17 +3,24 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.linear_model import LinearRegression
+import os
+
 
 def return_something():
     return 200
 
+
 def return_something2(s):
     return s
 
+
 def plot_df(cols, filename):
+    filePath = str(os.path.dirname(os.path.realpath(__file__)))
+
     x = np.random.randn(100)
     ax = sns.distplot(list(cols))
-    plt.savefig('static/' + filename)
+    plt.savefig(os.path.join(filePath, 'static', filename))
+
     return
 
 
@@ -23,7 +30,8 @@ def get_prediction_lr(df, ls, filename):
     df: a data frame
     ls: a list containing the information for a house to predict for
     '''
-    #return(df.to_html())
+
+    # return(df.to_html())
     # Save a plot image
     plot_df(df['SalePrice'], filename)
 
